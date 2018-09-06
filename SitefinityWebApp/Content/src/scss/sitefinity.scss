@@ -1,0 +1,37 @@
+﻿// Various styles to make the Sitefinity back-end work properly
+body.sfPageEditor {
+    max-width: none;
+    // Set site navbar to absolute so it does not overlap Sitefinity's page builder toolbar.
+    // Set site navbar elements height so it does not overlay Sitefinity layout controls.
+    .navbar-fixed-bottom, .navbar-fixed-top {
+        position: absolute !important;
+        height: 70px !important;
+        overflow: hidden !important;
+    }
+
+    .footer-fixed {
+        position: relative !important;
+    }
+
+    .hero {
+        overflow: visible !important;
+    }
+
+    .hero, .heroimg {
+        margin: 0 !important;
+        margin-top: 0;
+    }
+
+    .hidden, .visible-lg, .visible-lg-block, .visible-lg-inline, .visible-lg-inline-block, .visible-md, .visible-md-block, .visible-md-inline, .visible-md-inline-block, .visible-sm, .visible-sm-block, .visible-sm-inline, .visible-sm-inline-block, .visible-xs, .visible-xs-block, .visible-xs-inline, .visible-xs-inline-block {
+        display: block !important;
+    }
+    .btn{
+        height: auto;
+        width: auto;
+        display: inline-block;
+        text-transform: none;
+    }
+    header{
+        position: static;
+    }
+}

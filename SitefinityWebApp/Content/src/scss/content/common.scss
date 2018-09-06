@@ -1,0 +1,15 @@
+﻿/* Temp styles to get the page hero placeholder images to display properly */
+.jumbotron {
+    position: relative;
+    min-height: 330px;
+
+    h1, p {
+        opacity: 0.99;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

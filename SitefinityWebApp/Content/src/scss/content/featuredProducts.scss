@@ -1,0 +1,87 @@
+.featured-products {
+  margin: 0 auto 25px;
+  width: 270px;
+  border: 1px solid $color-gray;
+  background-color: $color-white;
+  a{
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  .slick-arrow{
+    @extend .caret;
+    border-width: 20px;
+    &.slick-prev{
+      transform: rotate(90deg);
+      left: -34px;
+    }
+    &.slick-next{
+      right: -34px;
+    }
+  }
+  &__col {
+    padding: 0;
+  }
+  &__item {
+    background-color: transparent;
+    width: 270px;
+    padding: 10px;
+    h3 {
+      font-size: 14px;
+      color: $color-gray;
+      font-weight: $font-weight-light;
+      span {
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: $color-black;
+      font-weight: $font-weight-light;
+      padding: 0 5%;
+    }
+    >div {
+      >a {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+    .img-container {
+      margin: 1% 8% 0;
+    }
+  }
+  @media(min-width: 360px){
+    width: 300px;
+    &__item{
+      width: 300px;
+    }
+  }
+  @media(min-width: $screen-sm) {
+    border: 1px solid $color-gray;
+    width: auto;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    &__item {
+      background-color: $color-white;
+      width: auto;
+    }
+  }
+  @media(min-width: $screen-md){
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    &__col{
+      padding: 0 ($grid-gutter-width / 2);
+    }
+    &__item{
+      width: auto;
+      border: 1px solid $color-gray;
+
+    }
+  }
+}

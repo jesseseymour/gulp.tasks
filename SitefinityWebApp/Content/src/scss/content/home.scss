@@ -1,0 +1,224 @@
+﻿.home {
+  &__video {
+    background-color: $color-black;
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      color: $color-gold;
+      font-size: 23px;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $color-white;
+      font-weight: $font-weight-light;
+    }
+
+    &__copy {
+      >div {
+        width: 314px;
+        margin: 30px auto;
+      }
+    }
+
+    @media(min-width: $screen-md) {
+      h2 {
+        margin-bottom: 20px;
+        font-size: 34px;
+      }
+
+      p {
+        line-height: 1.4;
+        font-size: 20px;
+      }
+
+      &__copy {
+        >div {
+          width: auto;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+
+          >div {
+            flex-basis: 450px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-categories {
+  justify-content: center;
+  margin-bottom: 26px;
+
+  &__item {
+    &__inner>div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 160px;
+      justify-content: space-between;
+    }
+
+    a {
+      color: $color-black;
+      font-weight: $font-weight-medium;
+      text-transform: uppercase;
+      height: 40px;
+
+      .caret {
+        display: none;
+        border-top-color: $color-black;
+      }
+    }
+
+    p {
+      display: none;
+      font-weight: $font-weight-light;
+      color: $color-darkgray;
+      font-size: 18px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    &--pp {
+      .home-categories__img--detail {
+        width: 140px;
+      }
+    }
+
+    &--treats {
+      .home-categories__img--detail {
+        width: 40px;
+      }
+    }
+
+    &--broths {
+      .home-categories__img--detail {
+        width: 115px;
+      }
+    }
+  }
+
+  &__img--detail {
+    @media(max-width: $screen-sm-max) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 128px;
+      align-items: center;
+    }
+  }
+
+  @media(min-width: $screen-md) {
+    margin-bottom: 50px;
+
+    &__item {
+      &__inner>div {
+        height: 330px;
+        position: relative;
+      }
+
+      p {
+        display: block;
+      }
+
+      a {
+        font-size: 18px;
+
+        .caret {
+          display: inline-block;
+        }
+      }
+
+      .home-categories__img--pack {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        text-align: left;
+      }
+
+      .home-categories__img--detail {
+        position: absolute;
+        z-index: 5;
+      }
+
+      a {
+        margin-top: -40px;
+        position: relative;
+        z-index: 100;
+        font-weight: $font-weight-bold;
+      }
+
+      &--pp {
+        .home-categories__img--pack {
+          img {
+            width: 62%;
+          }
+        }
+
+        .home-categories__img--detail {
+          right: 0;
+          top: 64%;
+          width: 60%;
+        }
+      }
+
+      &--treats {
+        .home-categories__img--pack {
+          img {
+            width: 60%;
+            margin-left: 15%;
+          }
+        }
+
+        .home-categories__img--detail {
+          right: 2%;
+          top: 24%;
+          width: 28%;
+        }
+      }
+
+      &--broths {
+        .home-categories__img--pack {
+          img {
+            width: 37%;
+            margin-left: 19%;
+          }
+        }
+
+        .home-categories__img--detail {
+          right: 12%;
+          top: 41%;
+          width: 46%;
+        }
+      }
+    }
+  }
+
+  @media(min-width: $screen-lg) {
+    &__item {
+      &__inner>div {
+        height: 370px;
+      }
+
+      p {
+        font-size: 22px;
+      }
+
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}

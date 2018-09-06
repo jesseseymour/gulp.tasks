@@ -1,0 +1,56 @@
+﻿@using SitefinityWebApp.Utility;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+<!DOCTYPE html>
+<html @Html.RenderLangAttribute()>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6026974/7964392/css/fonts.css" />
+    <title></title>
+
+    @{
+        Html.RenderPartial("_AntiClickjack");
+        Html.RenderPartial("_GoogleTagManager", "GTM-XXXXXX");
+    }
+    <!-- inject:css -->
+
+    <link rel="stylesheet" href="/Content/src/css/fontello.css">
+
+    <link rel="stylesheet" href="/Content/src/css/main.css">
+
+    <!-- endinject -->
+
+    @Html.Section("head")
+    <!-- inject:head:js -->
+    <script src="/Content/src/js/head/bootstrap.min.js"></script>
+    <!-- endinject -->
+</head>
+<body class="@Html.PageBodyClass()">
+    @{
+        Html.RenderPartial("_GoogleTagManagerNoScript", "GTM-XXXXXX");
+    }
+    @Html.Section("top")
+
+    <header class="container-fluid container--nopadding">
+        @Html.SfPlaceHolder("HeaderContent")
+    </header>
+    <article id="content" class="container-fluid">
+        @Html.SfPlaceHolder("MainContent")
+    </article>
+    <footer class="container-fluid container--nopadding footer">
+        @Html.SfPlaceHolder("FooterContent")
+    </footer>
+
+    @* Holder.min.js is only needed for creating placerholder images *@
+    <script src="/Content/holder.min.js"></script>
+    <!-- inject:js -->
+    <script src="/Content/src/js/vendor/slick.js"></script>
+    <script src="/Content/src/js/carousel-homepage.js"></script>
+    <script src="/Content/src/js/main.js"></script>
+    <!-- endinject -->
+    @Html.Section("bottom")
+</body>
+</html>

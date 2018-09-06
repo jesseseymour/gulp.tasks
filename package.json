@@ -1,0 +1,38 @@
+{
+  "name": "sheba.sitefinity",
+  "version": "1.0.0",
+  "description": "Sheba brand Sitefinity website for 2018.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/epsilondigital/EA-Mars-Sheba2018-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epsilondigital/EA-Mars-Sheba-Website2018/issues"
+  },
+  "homepage": "https://github.com/epsilondigital/EA-Mars-Sheba-Website2018#readme",
+  "devDependencies": {
+    "bootstrap-sass": "3.3.6",
+    "browser-sync": "^2.24.6",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-inject": "^4.3.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "magnific-popup": "^1.0.0",
+    "run-sequence": "^2.2.1",
+    "yargs": "^12.0.1"
+  },
+  "dependencies": {}
+}

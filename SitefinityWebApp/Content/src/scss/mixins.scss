@@ -1,0 +1,8 @@
+@mixin font-gotham {
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: normal;
+}
+
+@mixin button-boxshadow {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}

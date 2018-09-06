@@ -1,0 +1,61 @@
+﻿@import 'variables';
+@import 'vendor/bootstrap/project/sass/main.scss';
+@import 'vendor/bootstrap-grid-flexbox/bootstrap-grid-flexbox.scss';
+@import 'vendor/slick/slick';
+@import 'vendor/slick/slick-theme';
+
+@import 'mixins.scss';
+
+body {
+    max-width: 1308px;
+    margin: auto;
+    background-color: $color-lightgray;
+    @include font-gotham;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: $font-weight-medium;
+}
+h2{
+    font-size: 18px;
+    &.h2{
+        &--featured-products{
+            font-size: 25px;
+            text-transform: uppercase;
+            @media(min-width: $screen-md){
+                font-size: 35px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    @media(min-width: $screen-sm){
+        font-size: 24px;
+    }
+
+}
+.h1,
+.h2{
+    &--book{
+        font-weight: $font-weight-book;
+    }
+    &--light{
+        font-weight: $font-weight-light;
+    }
+}
+
+@import 'header';
+@import 'content/carousel';
+@import 'content/featuredProducts';
+#content {
+    color: $color-black;
+    @import 'content/common';
+    @import 'content/home';
+    @import 'content/why-sheba';
+    @import 'content/products';
+    @import 'content/articles';
+}
+
+@import 'footer';
+@import 'utilities';
+@import 'sitefinity';

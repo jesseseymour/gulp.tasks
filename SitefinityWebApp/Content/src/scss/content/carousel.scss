@@ -1,0 +1,132 @@
+.slide {
+  &__container {
+    position: relative;
+    height: 0;
+    padding-bottom: 113.3333333333333%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    @media(min-width: $screen-md) {
+      padding-bottom: 41.47104851330203%;
+    }
+    h1,
+    h2 {
+      color: $color-gold;
+    }
+    /**
+    * This block was compiled and pasted into the cms
+    **/
+    /*
+    &--hp1 {
+      .slide__copy {
+        bottom: 9.6vw;
+        left: 9.6vw;
+        h1 {
+          font-size: 6.666666666666667vw;
+        }
+        h2 {
+          font-size: 3.733333333333334vw;
+        }
+        h1,
+        h2 {
+          margin: 0 0 1.3333333333333335vw 0;
+          text-transform: uppercase;
+        }
+      }
+      @media(min-width: $screen-md) {
+        .slide__copy {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 32vw;
+          left: auto;
+          bottom: auto;
+          right: 1.390922401171303vw;
+          top: 10.761346998535872vw;
+          h1,h2{
+            flex-basis: 100%;
+            text-align: center;
+          }
+          h1 {
+            font-size: 2.562225475841874vw;
+            font-weight: $font-weight-light;
+          }
+          h2 {
+            font-size: 1.4641288433382138vw;
+          }
+        }
+      }
+      @media(min-width: $screen-max){
+        .slide__copy {
+          width: 419px;
+          right: 18px;
+          top: 141px;
+          h1{
+            font-size: 34px;
+          }
+          h2{
+            font-size: 19px;
+          }
+          h1,h2{
+            margin-bottom: 17px;
+          }
+        }
+      }
+    } */
+  }
+  &__copy {
+    position: absolute;
+  }
+}
+
+.home__hero {
+  >div {
+    position: relative;
+    padding-bottom: 5.3%;
+    background-color: $color-black;
+    &.slick-dotted.slick-slider{
+      margin-bottom: 0;
+    }
+    &:after {
+      display: block;
+      content: '';
+      background: transparent url(/images/default-source/default-album/sheba-swoop-with-light-grey.png?Status=Master&sfvrsn=15d0ee59_8) no-repeat;
+      background-size: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-bottom: 12%;
+      width: 100%;
+    }
+  }
+  
+  .slick-dots {
+    bottom: 14%;
+    z-index: 10;
+    width: auto;
+    right: 9.866666666666667vw;
+    li {
+      width: 10px;
+      height: 10px;
+      &.slick-active {
+        button {
+          opacity: $slick-opacity-default;
+        }
+      }
+      button {
+        background-color: $color-gold;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        opacity: $slick-opacity-not-active;
+        &:hover {
+          opacity: $slick-opacity-on-hover;
+        }
+      }
+    }
+    @media(min-width: $screen-md){
+      bottom: 25%;
+      width: 100%;
+      right: auto;
+    }
+  }
+}

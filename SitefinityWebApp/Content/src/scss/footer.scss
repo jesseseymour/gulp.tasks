@@ -1,0 +1,302 @@
+﻿.footer {
+    $footer-padding: 15px;
+    $footer-width: 310px;
+    background-color: $color-lightgray;
+
+    h2 {
+        font-weight: $font-weight-light;
+        margin: 0;
+        color: $color-darkgray;
+
+        @media(min-width: $screen-md) {
+            body:not(.home) & {
+                font-size: 20px;
+                margin-bottom: 10px;
+                color: $color-gray;
+            }
+
+            body.home & {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    @media(min-width: $screen-md) {
+        border-top: 1px solid $color-gray;
+        overflow: hidden;
+    }
+
+    &__top {
+        max-width: 1088px;
+
+        @media(min-width: $screen-md) {
+            margin-right: auto !important;
+            margin-left: auto !important;
+
+            body.home & {
+                >div {
+                    flex-basis: 50%;
+                    max-width: 50%;
+                    width: 50%;
+                    height: 350px;
+                }
+            }
+        }
+
+        &__right {
+            @media(min-width: $screen-md) {
+                display: flex;
+
+                >div {
+                    flex-basis: 50%;
+                }
+
+                body.home & {
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+
+                    >div {
+                        flex-basis: 375px;
+                    }
+                }
+
+                &:after {
+                    .home & {
+                        content: '';
+                        width: 200%;
+                        height: 1px;
+                        position: absolute;
+                        top: 60%;
+                        left: 0;
+                        background-color: $color-gray;
+                    }
+                }
+            }
+        }
+    }
+
+    &__nav {
+        background-color: $color-black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px $footer-padding;
+
+        >li {
+            font-size: 12px;
+            font-weight: $font-weight-light;
+
+            >a {
+                padding: 0px 5px;
+            }
+
+            &:last-child {
+                color: $color-white;
+                flex-basis: 100%;
+                text-align: center;
+                padding-top: 10px;
+            }
+
+            @media(min-width: $screen-md) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+
+    &__social,
+    &__newsletter,
+    &__faq {
+        padding: 24px 0;
+        border-top: 1px solid $color-gray;
+
+        >div {
+            width: $footer-width;
+            margin: 0 auto;
+        }
+
+        @media(min-width: $screen-md) {
+            body:not(.home) & {
+                padding: 24px;
+            }
+
+            border: none;
+
+            >div {
+                width: auto;
+            }
+        }
+    }
+
+    &__newsletter,
+    &__faq {
+        @media(min-width: $screen-md) {
+            body:not(.home) & {
+                border-right: 1px solid $color-gray;
+            }
+        }
+    }
+
+    &__social {
+        font-weight: $font-weight-light;
+        color: $color-gray;
+        font-size: 25px;
+
+        >div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            >span {
+                padding-right: 25px;
+            }
+
+            >a:nth-of-type(-n+2) span {
+                margin-right: 14px;
+            }
+        }
+
+        span[class^="Icon-"] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-gray;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            color: $color-lightgray;
+        }
+
+        @media(min-width: $screen-md) {
+            >div {
+                body:not(.home) & {
+                    flex-wrap: wrap;
+
+                    >span {
+                        flex-basis: 100%;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                body.home & {
+                    >span {
+                        padding-right: 75px;
+                        color: $color-darkgray;
+                    }
+                }
+            }
+        }
+    }
+
+    &__faq {
+        >div {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__contact {
+            flex-basis: 100%;
+            text-align: center;
+            color: $color-gray;
+            margin-top: 20px;
+            font-weight: $font-weight-light;
+
+            a {
+                color: $color-darkgray;
+                font-weight: $font-weight-bold;
+            }
+
+            .caret {
+                border-top-color: $color-darkgray;
+            }
+
+            @media(min-width: $screen-md) {
+                body:not(.home) & {
+                    display: none;
+                }
+            }
+        }
+
+        @media(min-width: $screen-md) {
+            body.home & {
+                h2 {
+                    flex-basis: 100%;
+                }
+
+                a.btn,
+                &__contact {
+                    flex-basis: 50%;
+                }
+
+                &__contact {
+                    margin: 0;
+                    text-align: left;
+                    padding-left: 20px;
+
+                    a {
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__newsletter {
+        h2 {
+            margin-bottom: 9px;
+        }
+
+        p {
+            color: $color-gray;
+            font-weight: $font-weight-light;
+            margin-bottom: 9px;
+        }
+
+        input {
+            margin-bottom: 25px;
+            font-weight: $font-weight-light;
+            height: 50px;
+            font-size: 16px;
+        }
+
+        @media(min-width: $screen-md) {
+            body.home & {
+                border-right: 1px solid $color-gray;
+                display: flex;
+                height: 100%;
+                align-items: center;
+
+                >div {
+                    flex-basis: 375px;
+                }
+            }
+
+            h2 {
+                flex-basis: 100%;
+            }
+
+            >div {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            p {
+                body:not(.home) & {
+                    display: none;
+                }
+            }
+
+            input {
+                body:not(.home) & {
+                    flex-basis: 60%;
+                }
+            }
+        }
+    }
+}
